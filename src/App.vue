@@ -52,11 +52,16 @@ export default {
       if(response.data.data.list){
         this.tableData = response.data.data.list
         this.IsNcov = true
-      }else{
+      }
+      else{
         this.Message()
         this.tableData = []
         this.IsNcov = false
       }
+    }).catch(()=>{
+        this.Message()
+        this.tableData = []
+        this.IsNcov = false
     })
   },
   methods:{
